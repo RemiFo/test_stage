@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TEST DE STAGE : QUESTIONNAIRE EN LIGNE</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <div id="entete"><b>TEST DE STAGE : QUESTIONNAIRE EN LIGNE</b></div>
+  <!--  DEBUT FORMULAIRE -->
+  <form method="POST" onsubmit="return VerifForm(this);" id="form1" name="formulaire" action="php/traitement.php">
+    <div id="container">
+
+      <h3>Quel est votre nom d'utilisateur ?</h3>
+      <input type="Text" name="username" id="name" placeholder="Nom d'utilisateur" onblur="VerifNom(username)"> <br>
+
+      <h3>Quel est votre métier ?</h3>
+      <select name="ChoixMetier" id="metier" onblur="VerifMetier(ChoixMetier)">
+        <option  disabled value="null" selected>---Choix---</option>
+        <option value="Agriculteur" > 
+          Agriculteur
+        </option>
+        <option value="Informaticien">
+          Informaticien
+        </option>
+        <option value="Comptable">
+          Comptable
+        </option>
+        <option value="Medecin">
+          Médecin
+        </option>
+        <option value="Coiffeur">
+          Coiffeur
+        </option>
+      </select> <br>
+
+      <!-- DEBUT QUESTIONNAIRE OUI/NON -->
+
+      <!-- QUESTION 1 -->
+      <h3> Avez-vous une voiture ?</h3>
+      <input type="radio" name="question1"  id="oui1" value="oui" > 
+      <label for="oui1">Oui</label>
+      <input type="radio" name="question1"  id="non1" value="non" > 
+      <label for="non1">Non</label><br>
+
+      <!-- QUESTION 2 -->
+      <h3> Prenez vous les transports en commun ?</h3>
+      <input type="radio" name="question2" id="oui2" value="oui"> 
+      <label for="oui2">Oui</label>
+      <input type="radio" name="question2" id="non2" value="non"> 
+      <label for="non2">Non</label><br>
+
+      <!-- QUESTION 3 -->
+      <h3> Allez-vous au travail en voiture ?</h3>
+      <input type="radio" name="question3"  id="oui3" value="oui">
+      <label for="oui3">Oui</label>
+      <input type="radio" name="question3"  id="non3" value="non">
+      <label for="non3">Non</label><br>
+
+      <!-- QUESTION 4 -->
+      <h3> Allez-vous au travail en vélo ?</h3>
+      <input type="radio" name="question4" id="oui4" value="oui">
+      <label for="oui4">Oui</label>
+      <input type="radio" name="question4" id="non4" value="non"> 
+      <label for="non4">Non</label><br>
+
+      <!-- QUESTION 5 -->
+      <h3> Allez-vous au travail en utilisant les transports en commun ?</h3>
+      <input type="radio"  name="question5" id="oui5" value="oui"> 
+      <label for="oui5">Oui</label>
+      <input type="radio"  name="question5" id="non5" value="non"> 
+      <label for="non5">Non</label><br>
+      
+      <!--FIN QUESTIONNAIRE -->
+
+      <input type="submit" id="envoyer" value="Valider">
+
+    </div>
+    <p id="erreur"></p>
+  </form>
+  <!-- FIN FORMULAIRE -->
+  
+</body>
+</html>
